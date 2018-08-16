@@ -1,0 +1,101 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+
+<link href="static/templatemo_style.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+<div id="templatemo_wrapper">
+
+    <div id="templatemo_header">
+        <div id="site_title">
+            <a href="#">
+                <img src="static/images/templatemo_logo.png" alt="City Blog Template" />
+                <span>git@github.com:Helltab/HelltabBlog.git</span>
+            </a>
+        </div> <!-- end of site_title -->
+    </div> <!-- end of templatemo_header -->
+
+	<div id="templatemo_menu">
+        <ul>
+            <li><a href="index" >主页<span>Home Info</span></a></li>
+            <li><a href="about">关于<span>About P</span></a></li>
+            <li><a href="gallery">相册<span>Gallery L</span></a></li>
+            <li><a href="contact">联系我哦<span>Contact us</span></a></li>
+        </ul>    	
+    </div> <!-- end of templatemo_menu -->
+    
+    <div id="templatemo_main">
+    	<div id="templatemo_content">
+        
+            <div class="post_box">
+            	<a href="#">Freebies</a>, <a href="#">Templates</a>
+                <!--/*@thymesVar id="getTitle" type="java.lang.String"*/-->
+                <!--/*@thymesVar id="article" type="com.helltab.blog.entity.Article"*/-->
+                <h2 th:text="${article.getTitle()}">Aliquam lorem ante dapibus in viverra </h2>
+
+                <div class="post_meta"><strong>Date:</strong><a th:text="${article.getDate()}"> May 18th, 2048</a> | <strong>Author:</strong> Helltab</div>
+                <!--/*@thymesVar id="id" type="java.lang.Integer"*/-->
+                <!--/*@thymesVar id="imageurl" type="java.lang.String"*/-->
+                <img th:src="${imageurl}" src="static/images/templatemo_image_01.jpg" alt="image" />
+
+                <pre style="white-space:pre-wrap; line-height:30px" th:text="${article.getContent()}">  Nullam bibendum tempor est nec cursus. .</pre>
+		  </div>
+
+
+        </div> <!-- end of content -->
+
+        <div id="templatemo_sidebar">
+
+            <div class="sidebar_box">
+                <a href="#"><img src="static/images/templatemo_ads.jpg" alt="banner" /></a>
+            </div>
+
+            <div class="sidebar_box">
+                <h4>分类</h4>
+                <ul class="tmo_list">
+                    <li><a href="#life">生活</a></li>
+                    <li><a href="#emotion">情感</a></li>
+                    <li><a href="#story">故事</a></li>
+                    <li><a href="#knowledge">知识</a></li>
+                    <li><a href="#fiction">小说</a></li>
+
+                </ul>
+            </div>
+
+            <div class="sidebar_box">
+                <h4>最热文章</h4>
+                <!--/*@thymesVar id="articles" type="java.util.List<Article>"*/-->
+                <div class="recent_comment_box" >
+                    <!--/*@thymesVar id="getTitle" type="java.lang.String"*/-->
+                    <a th:href="index">主页</a>
+
+                    <!--/*@thymesVar id="getSummary" type="java.lang.String"*/-->
+                    <p >生活很残酷，理想很美好，为理想而生活，破而求立</p>
+
+                </div>
+
+
+            </div>
+
+        </div> <!-- end of sidebar -->
+
+        <div class="cleaner"></div>
+    </div> <!-- end of main -->
+
+</div> <!-- end of wrapper -->
+
+<div id="templatemo_footer_wrapper">
+	<div id="templatemo_footer">
+		<a href="index" class="current">Home</a> | <a href="about">About Us</a> | <a href="gallery">Gallery</a> | <a href="contact">Contact Us</a>       
+        <div class="cleaner h10"></div>
+        Copyright © 2018 <a href="#">git@github.com:Helltab/HelltabBlog.git</a>
+    	<div class="cleaner"></div>		
+    </div>
+</div>
+
+</body>
+</html>

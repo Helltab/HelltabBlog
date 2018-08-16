@@ -1,0 +1,150 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+
+<link href="static/templatemo_style.css" rel="stylesheet" type="text/css" />
+
+<!--////// CHOOSE ONE OF THE 3 PIROBOX STYLES  \\\\\\\-->
+<link href="static/css_pirobox/white/style.css" media="screen" title="shadow" rel="stylesheet" type="text/css" />
+
+
+<!--////// INCLUDE THE JS AND PIROBOX OPTION IN YOUR HEADER  \\\\\\\-->
+<script type="text/javascript" src="staticl/js/jquery.min.js"></script>
+<script type="text/javascript" src="static/js/piroBox.1_2.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$().piroBox({
+			my_speed: 600, //animation speed
+			bg_alpha: 0.5, //background opacity
+			radius: 4, //caption rounded corner
+			scrollImage : false, // true == image follows the page, false == image remains in the same open position
+			pirobox_next : 'piro_next', // Nav buttons -> piro_next == inside piroBox , piro_next_out == outside piroBox
+			pirobox_prev : 'piro_prev',// Nav buttons -> piro_prev == inside piroBox , piro_prev_out == outside piroBox
+			close_all : '.piro_close',// add class .piro_overlay(with comma)if you want overlay click close piroBox
+			slideShow : 'slideshow', // just delete slideshow between '' if you don't want it.
+			slideSpeed : 4 //slideshow duration in seconds(3 to 6 Recommended)
+	});
+});
+</script>
+<!--////// END  \\\\\\\-->
+
+</head>
+<body>
+
+<div id="templatemo_wrapper">
+
+    <div id="templatemo_header">
+        <div id="site_title">
+            <a href="#">
+                <img src="static/images/templatemo_logo.png" alt="City Blog Template" />
+                <span>git@github.com:Helltab/HelltabBlog.git</span>
+            </a>
+        </div> <!-- end of site_title -->
+    </div> <!-- end of templatemo_header -->
+
+	<div id="templatemo_menu">
+        <ul>
+            <li><a href="index" >主页<span>Home Info</span></a></li>
+            <li><a href="about">关于<span>About P</span></a></li>
+            <li><a href="gallery" class="current">相册<span>Gallery L</span></a></li>
+            <li><a href="contact">联系我哦<span>Contact us</span></a></li>
+        </ul>    	
+    </div> <!-- end of templatemo_menu -->
+    
+    <div id="templatemo_main">
+    	<div id="templatemo_content">
+        
+        	<h1>乡村相册展示</h1>
+            <p th:text="一些乡村图片">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempus rutrum tellus at varius. Ut sit amet arcu elit, in posuere arcu. Phasellus in sapien vel felis imperdiet ullamcorper.</p>
+                    
+            <div class="cleaner h40"></div>
+                
+            <div id="gallery">
+				<div class="gallery_box">
+					<a href="static/images/gallery/image_01_b.jpg" class="pirobox gallery_img image_wrapper" title="Project 1"><img src="static/images/gallery/image_01.jpg" alt="" /></a>
+                    <div class="right">
+                    	<h5>Project 1</h5>
+                        <p><em th:text="picture1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus egestas diam quis dapibus.</em></p>
+                        <p>Quisque sed mauris velit, a congue lorem. Aliquam quis mi sed libero dapibus iaculis a et mi. Egestas diam quis dapibus. Quisque sed mauris velit, a congue lorem. </p>
+                        <a href="#" class="more float_r">Visit site</a>
+					</div>
+                    <div class="cleaner"></div>
+				</div>
+                
+                <div class="gallery_box">
+					<a href="static/images/gallery/image_02_b.jpg" class="pirobox gallery_img image_wrapper" title="Project 1"><img src="static/images/gallery/image_02.jpg" alt="" /></a>
+                    <div class="right">
+                    	<h5>Project 2</h5>
+                        <p><em th:text="picture2">Cras id tortor nisl. Nullam ante diam, interdum sit amet. Velit justo sodales lectus, ac porta nunc eros vitae.</em></p>
+                        <p>Maecenas eros ipsum, tincidunt vitae ultricies id, blandit quis nulla. Fusce sem nulla, rutrum ac suscipit eget, commodo vitae est. In at orci arcu.</p>
+                        <a href="#" class="more float_r">Visit site</a>
+					</div>
+                    <div class="cleaner"></div>
+				</div>
+                
+                <div class="gallery_box last_gallery_box">
+					<a href="static/images/gallery/image_03_b.jpg" class="pirobox gallery_img image_wrapper" title="Project 1"><img src="static/images/gallery/image_03.jpg" alt="" /></a>
+                    <div class="right">
+                    	<h5>Project 3</h5>
+                        <p><em th:text="picture3">Integer consectetur enim eget diam tincidunt vehicula. Cras id tortor nisl. Nullam ante diam, interdum sit amet</em>.</p>
+                          <p>Sodales nec, mollis lobortis sapien. Vestibulum pharetra tortor vitae velit pretium rhoncus integer consectetur enim eget.</p>
+                        <a href="#" class="more float_r">Visit site</a>
+					</div>
+                    <div class="cleaner"></div>
+				</div>
+            </div> <!-- end of gallery -->
+
+        </div> <!-- end of content -->
+
+        <div id="templatemo_sidebar">
+
+            <div class="sidebar_box">
+                <a href="#"><img src="static/images/templatemo_ads.jpg" alt="banner" /></a>
+            </div>
+
+            <div class="sidebar_box">
+                <h4>分类</h4>
+                <ul class="tmo_list">
+                    <li><a href="#life">生活</a></li>
+                    <li><a href="#emotion">情感</a></li>
+                    <li><a href="#story">故事</a></li>
+                    <li><a href="#knowledge">知识</a></li>
+                    <li><a href="#fiction">小说</a></li>
+
+                </ul>
+            </div>
+
+            <div class="sidebar_box">
+                <h4>最热文章</h4>
+                <!--/*@thymesVar id="articles" type="java.util.List<Article>"*/-->
+                <div class="recent_comment_box" >
+                    <!--/*@thymesVar id="getTitle" type="java.lang.String"*/-->
+                    <a th:href="index">主页</a>
+
+                    <!--/*@thymesVar id="getSummary" type="java.lang.String"*/-->
+                    <p >生活很残酷，理想很美好，为理想而生活，破而求立</p>
+
+                </div>
+
+
+            </div>
+
+        </div> <!-- end of sidebar -->
+
+        <div class="cleaner"></div>
+    </div> <!-- end of main -->
+
+</div> <!-- end of wrapper -->
+
+<div id="templatemo_footer_wrapper">
+	<div id="templatemo_footer">
+		<a href="index.html" class="current">Home</a> | <a href="about.html">About Us</a> | <a href="gallery.html">Gallery</a> | <a href="contact.html">Contact Us</a>       
+        <div class="cleaner h10"></div>
+        Copyright © 2018 <a href="#">git@github.com:Helltab/HelltabBlog.git</a>
+    	<div class="cleaner"></div>		
+    </div>
+</div>
+
+</body>
+</html>
