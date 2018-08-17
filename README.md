@@ -12,10 +12,10 @@ A blog about myself (个人日志发布展示)
 <h2>运行时：
 <br><br>
 
-![Image text](https://github.com/Helltab/HelltabBlog/blob/master/images/blog01.png)
+![Image text](https://github.com/Helltab/HelltabBlog/blob/master/images/blog01.jpg)
 
-![Image text](https://github.com/Helltab/HelltabBlog/blob/master/images/blog02.png)
+![Image text](https://github.com/Helltab/HelltabBlog/blob/master/images/blog02.jpg)
 
-![Image text](https://github.com/Helltab/HelltabBlog/blob/master/images/blog03.png)
+![Image text](https://github.com/Helltab/HelltabBlog/blob/master/images/blog03.jpg)
 
 
