@@ -1,5 +1,5 @@
-create database blog;
-use iblog;
+create database if not exists `blog`;
+use blog;
 -- phpMyAdmin SQL Dump
 -- version 4.6.4
 -- https://www.phpmyadmin.net/
